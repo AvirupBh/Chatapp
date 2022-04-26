@@ -215,7 +215,7 @@
   color: #fff;
   padding: 0 10px;
   cursor: pointer;
-  background: #33383B;
+  background: #eff2f5;
   height: 100%;
   display: flex;
   align-items: center;
@@ -242,7 +242,7 @@
   font-size: 14px;
   display: inline-block;
   margin: 0 5px;
-  color: #eee;
+  color: rgb(0, 0, 0);
 }
 .remove-attachment{
   font-size: 20px;

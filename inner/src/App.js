@@ -9,7 +9,7 @@ import MessagesControl from './components/MessagesControl';
 import Public from './components/Public';
 
 
-const socket = io(`http://localhost:7000`);
+const socket = io(`localhost:7000`);
 
 function App() {
 
@@ -142,7 +142,7 @@ function App() {
             messages[key] = [data];
           }
   
-          return {...messages};
+          return messages;
         })
       }
       else{
@@ -159,7 +159,7 @@ function App() {
           messages[key] = [data];
         }
 
-        return {...messages};
+        return messages;
       })}
     })
   }, []);
@@ -197,7 +197,7 @@ function App() {
               <CreateUser onCreateUser = {onCreateUser}
               value={username}
               onChange={(e) => setUsername(e.target.value)}/>) : null}
-          {/* step2 shoe all available users*/
+          {/* step2 show all available users*/
             step === 1 ? (
               <OnlineUsers onUserSelect = {onUserSelect}
               onPublicSelect = {onPublicSelect}
@@ -225,7 +225,7 @@ function App() {
               />
             ) : null
           }
-          {/* step3 select user and switch to chat window*/
+          {/* step3 select public and switch to chat window*/
             step === 3 ? (
               <Public
               value = {message}
