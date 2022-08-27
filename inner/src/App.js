@@ -9,7 +9,7 @@ import MessagesControl from './components/MessagesControl';
 import Public from './components/Public';
 
 
-const socket = io(`localhost:7000`);
+const socket = io(`192.168.0.8:7000`);
 
 function App() {
 
